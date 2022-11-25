@@ -1,0 +1,323 @@
+/* Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed%3Awght%40300%3B700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans%3Awght%40300%3B400%3B500%3B600%3B700%3B800&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Background Colors */
+    --secondary-color: #f77949;
+    --bg-blue: #37418e ;
+    --bg-white: #fff;
+    --bg-dark-blue: #292b70;
+    --bg-gray: #ecf0f9;
+
+    /* Text Colors */
+    --text-black-: #1f1f1f ;
+    --text-blue-: #1f294c;
+    --text-gray-: #6d6e7b;
+    --text-white-: #fff;
+
+    /* Fonts */
+    --primary-font: 'Open Sans Condensed', 'sans-serif';
+    --secondary-font: 'open sans', 'sans-serif';
+}
+
+body{
+    font-family: var(--secondary-font);
+    background-image: url('../images/page-background.jpg');
+    background-size: cover;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    overflow-x: hidden;
+}
+
+/* cursor animation */
+.cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition:all ease-out .1s;
+    z-index: 9999;
+
+}
+
+.cursor2 {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all ease-out .15s;
+    z-index: 9999;
+}
+
+h1:hover ~ .cursor {
+    background-color: red !important;
+    /* opacity: .5; */
+    z-index: 999;
+}
+
+h1:hover .cursor2 {
+    opacity: 0;
+    z-index: 999;
+}
+
+
+/* custom css with common classes*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+
+}
+
+section {
+    padding: 50px 0;
+}
+
+.main-btn {
+    background-color: var(--secondary-color);
+    display: inline-block;
+    border-radius: 25px;
+    padding: 10px 37px;
+    color: var(--text-white-);
+    transition: .2s;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    font-size: 17px;
+    text-decoration: none;
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+}
+
+.main-btn:hover {
+    background-color: var(--bg-blue);
+    color: var(--text-white-);
+}
+
+h1 {
+    font-size: 70px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    color: var(--text-blue-);
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 45px;
+    line-height: 64px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    color: var(--text-blue-);
+    margin-bottom: 15px;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    color: var(--text-blue-);
+    margin-bottom: 15px;
+    letter-spacing: 0;
+}
+
+p {
+    color: var(--text-gray-);
+    font-size: 15px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+button,
+select:focus {
+    border-color: var(--secondary-color) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Navbar Start*/
+
+.header_main {
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.header_main .navbar-brand img{
+    max-width: 150px;
+    height: auto;
+}
+
+.header_main .navbar-toggler {
+    border: 0;
+}
+
+.header_main .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.header_main .nav-item {
+    margin: 0 10px;
+}
+
+.header_main .nav-item .nav-link{
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-blue-);
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+}
+
+.header_main .nav-item .nav-link.active {
+    color: var(--secondary-color);
+}
+
+.header-scrolled {
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: var(--bg-white);
+    -webkit-box-shadow: 0 4px 6px 0 rgba(12, .0, .46, .05);
+    box-shadow: 0 4px 6px 0 rgba(12, .0, .46, .05);
+}
+
+
+/* Navbar End*/
+
+
+/* Banner Start */
+
+.banner_main {
+    padding-top: 80px;
+}
+
+/* Banner End */
+
+/* Service Start */
+
+.card {
+    border: 1.4px solid transparent;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.card:hover {
+    border-color: var(--secondary-color);
+    
+}
+
+.services_main span {
+    color: var(--secondary-color);
+}
+
+.services_main .service-img {
+    max-width: 80%;
+}
+
+/* Service End */
+
+/* Contact Start */
+
+.contact_main input {
+    padding: 10px;
+    background-color: var(--bg-white);
+    color: var(--text-gray-);
+}
+
+/* Contact End */
+
+
+/* back to top button start */
+
+.back-to-top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    display: none;
+    transition: all .6s ease-in-out;
+    background-color: var(--secondary-color);
+}
+
+.back-to-top .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.back-to-top .icon i {
+    font-size: 24px;
+    color: var(--text-white-);
+}
+
+.back-to-top:hover {
+    background-color: var(--bg-blue);
+    /* transition: all 1s ease-in-out; */
+}
+
+
+/* back to top button end */
+
+
+/* Footer start */
+
+#footer_main {
+    background-color: var(--bg-blue);
+}
+
+#developer-name, #web-name {
+    color:  var(--secondary-color);
+    font-weight: 700;
+}
+/* Footer end */
+
+
+/* Sign In form */
+.form {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+
+.signin-form form{
+    border-radius: 14px;
+    background-color: var(--bg-gray);
+}
+
+/* Sign In form */
